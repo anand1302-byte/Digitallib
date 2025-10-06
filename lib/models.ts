@@ -1,5 +1,7 @@
+import { ObjectId } from 'mongodb';
+
 export interface UserDocument {
-  _id?: string;
+  _id?: ObjectId;
   name: string;
   email: string;
   phone?: string;
@@ -12,7 +14,7 @@ export interface UserDocument {
 }
 
 export interface BookDocument {
-  _id?: string;
+  _id?: ObjectId;
   title: string;
   author: string;
   category: string;
@@ -31,7 +33,7 @@ export interface BookDocument {
 }
 
 export interface BorrowDocument {
-  _id?: string;
+  _id?: ObjectId;
   bookId: string;
   userId: string;
   borrowedAt: Date;
